@@ -80,3 +80,8 @@ Este arquivo HTML fornece a interface web para teleoperar o TurtleBot3. Inclui b
 2. **Problemas com o Feed da Webcam**: Verifique se sua webcam está conectada e acessível pelo OpenCV.
 3. **Erros de CORS**: Certifique-se de que o Flask-CORS está instalado e corretamente configurado no script `teleop_node.py`.
 
+## Vídeo de Execução
+
+[video](https://www.youtube.com/watch?v=0x6Cxucw9rM)
+
+Código desenvolvido por Ólin Medeiros Costa
