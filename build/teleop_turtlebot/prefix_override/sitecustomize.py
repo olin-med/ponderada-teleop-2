@@ -1,3 +1,0 @@
-import sys
-sys.real_prefix = sys.prefix
-sys.prefix = sys.exec_prefix = '/home/olin/github/ponderada-teleop/install/teleop_turtlebot'
