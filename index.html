@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teleop TurtleBot3</title>
+    <style>
+        .button {
+            font-size: 30px;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+        #videoElement {
+            width: 640px;
+            height: 480px;
+            border: 1px solid black;
+        }
+        #latency, #linear-velocity, #angular-velocity {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function sendCommand(action, direction) {
+            fetch('http://localhost:5000/move', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({action: action, direction: direction}),
+            }).then(response => response.json()).then(data => {
+                console.log('Success:', data);
+            }).catch((error) => {
+                console.error('Error:', error);
+            });
+        }
+
+        function updateSpeed() {
+            fetch('http://localhost:5000/speed', {
+                method: 'GET',
+            }).then(response => response.json()).then(data => {
+                document.getElementById('linear-velocity').textContent = `Linear Velocity: ${data.linear_velocity.toFixed(2)} m/s`;
+                document.getElementById('angular-velocity').textContent = `Angular Velocity: ${data.angular_velocity.toFixed(2)} rad/s`;
+            }).catch((error) => {
+                console.error('Error:', error);
+            });
+        }
+
+        function shutdownNode() {
+            fetch('http://localhost:5000/shutdown', {
+                method: 'POST',
+            }).then(response => response.json()).then(data => {
+                console.log('Node shutting down:', data);
+            }).catch((error) => {
+                console.error('Error:', error);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const buttons = document.querySelectorAll('.button');
+            buttons.forEach(button => {
+                button.addEventListener('mousedown', () => {
+                    sendCommand('start', button.getAttribute('data-direction'));
+                });
+                button.addEventListener('mouseup', () => {
+                    sendCommand('stop', button.getAttribute('data-direction'));
+                });
+                button.addEventListener('mouseleave', () => {
+                    sendCommand('stop', button.getAttribute('data-direction'));
+                });
+            });
+
+            const videoElement = document.getElementById('videoElement');
+
+            videoElement.src = 'http://localhost:5000/video_feed';
+
+            setInterval(updateSpeed, 100);  // Atualiza as velocidades a cada 100ms
+
+            document.getElementById('shutdown-button').addEventListener('click', shutdownNode);
+        });
+    </script>
+</head>
+<body>
+    <h1>Teleop TurtleBot3</h1>
+    <div>
+        <button class="button" data-direction="up">↑</button>
+    </div>
+    <div>
+        <button class="button" data-direction="left">←</button>
+        <button class="button" data-direction="down">↓</button>
+        <button class="button" data-direction="right">→</button>
+    </div>
+    <div>
+        <h2>Webcam Feed</h2>
+        <img id="videoElement">
+        <div id="latency">Latency: N/A</div>
+        <div id="linear-velocity">Linear Velocity: 0.00 m/s</div>
+        <div id="angular-velocity">Angular Velocity: 0.00 rad/s</div>
+    </div>
+    <button id="shutdown-button">Shutdown Node</button>
+</body>
+</html>

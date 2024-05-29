@@ -1,0 +1,23 @@
+[0.412s] Invoking command in '/home/olin/github/ponderada-teleop/src/teleop_turtlebot': PYTHONPATH=/home/olin/github/ponderada-teleop/build/teleop_turtlebot/prefix_override:/home/olin/github/ponderada-teleop/install/teleop_turtlebot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/teleop_turtlebot build --build-base /home/olin/github/ponderada-teleop/build/teleop_turtlebot/build install --record /home/olin/github/ponderada-teleop/build/teleop_turtlebot/install.log --single-version-externally-managed
+[0.575s] running egg_info
+[0.575s] writing ../../build/teleop_turtlebot/teleop_turtlebot.egg-info/PKG-INFO
+[0.575s] writing dependency_links to ../../build/teleop_turtlebot/teleop_turtlebot.egg-info/dependency_links.txt
+[0.575s] writing entry points to ../../build/teleop_turtlebot/teleop_turtlebot.egg-info/entry_points.txt
+[0.575s] writing requirements to ../../build/teleop_turtlebot/teleop_turtlebot.egg-info/requires.txt
+[0.575s] writing top-level names to ../../build/teleop_turtlebot/teleop_turtlebot.egg-info/top_level.txt
+[0.576s] reading manifest file '../../build/teleop_turtlebot/teleop_turtlebot.egg-info/SOURCES.txt'
+[0.577s] writing manifest file '../../build/teleop_turtlebot/teleop_turtlebot.egg-info/SOURCES.txt'
+[0.577s] running build
+[0.578s] running build_py
+[0.578s] copying teleop_turtlebot/teleop_node.py -> /home/olin/github/ponderada-teleop/build/teleop_turtlebot/build/lib/teleop_turtlebot
+[0.578s] running install
+[0.578s] running install_lib
+[0.579s] copying /home/olin/github/ponderada-teleop/build/teleop_turtlebot/build/lib/teleop_turtlebot/teleop_node.py -> /home/olin/github/ponderada-teleop/install/teleop_turtlebot/lib/python3.10/site-packages/teleop_turtlebot
+[0.579s] byte-compiling /home/olin/github/ponderada-teleop/install/teleop_turtlebot/lib/python3.10/site-packages/teleop_turtlebot/teleop_node.py to teleop_node.cpython-310.pyc
+[0.580s] running install_egg_info
+[0.581s] removing '/home/olin/github/ponderada-teleop/install/teleop_turtlebot/lib/python3.10/site-packages/teleop_turtlebot-0.0.0-py3.10.egg-info' (and everything under it)
+[0.581s] Copying ../../build/teleop_turtlebot/teleop_turtlebot.egg-info to /home/olin/github/ponderada-teleop/install/teleop_turtlebot/lib/python3.10/site-packages/teleop_turtlebot-0.0.0-py3.10.egg-info
+[0.582s] running install_scripts
+[0.596s] Installing teleop_node script to /home/olin/github/ponderada-teleop/install/teleop_turtlebot/lib/teleop_turtlebot
+[0.597s] writing list of installed files to '/home/olin/github/ponderada-teleop/build/teleop_turtlebot/install.log'
+[0.613s] Invoked command in '/home/olin/github/ponderada-teleop/src/teleop_turtlebot' returned '0': PYTHONPATH=/home/olin/github/ponderada-teleop/build/teleop_turtlebot/prefix_override:/home/olin/github/ponderada-teleop/install/teleop_turtlebot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/teleop_turtlebot build --build-base /home/olin/github/ponderada-teleop/build/teleop_turtlebot/build install --record /home/olin/github/ponderada-teleop/build/teleop_turtlebot/install.log --single-version-externally-managed

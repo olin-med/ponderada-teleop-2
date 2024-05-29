@@ -1,0 +1,20 @@
+[0.453s] Invoking command in '/home/olin/github/ponderada-teleop/build/teleop_turtlebot': PYTHONPATH=/home/olin/github/ponderada-teleop/build/teleop_turtlebot/prefix_override:/home/olin/github/ponderada-teleop/install/teleop_turtlebot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/olin/github/ponderada-teleop/build/teleop_turtlebot/build --no-deps
+[0.606s] running develop
+[0.607s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[0.607s]   warnings.warn(
+[0.703s] running egg_info
+[0.703s] creating teleop_turtlebot.egg-info
+[0.703s] writing teleop_turtlebot.egg-info/PKG-INFO
+[0.703s] writing dependency_links to teleop_turtlebot.egg-info/dependency_links.txt
+[0.703s] writing entry points to teleop_turtlebot.egg-info/entry_points.txt
+[0.703s] writing requirements to teleop_turtlebot.egg-info/requires.txt
+[0.703s] writing top-level names to teleop_turtlebot.egg-info/top_level.txt
+[0.703s] writing manifest file 'teleop_turtlebot.egg-info/SOURCES.txt'
+[0.704s] reading manifest file 'teleop_turtlebot.egg-info/SOURCES.txt'
+[0.705s] writing manifest file 'teleop_turtlebot.egg-info/SOURCES.txt'
+[0.706s] running build_ext
+[0.706s] Creating /home/olin/github/ponderada-teleop/install/teleop_turtlebot/lib/python3.10/site-packages/teleop-turtlebot.egg-link (link to .)
+[0.707s] Installing teleop_node script to /home/olin/github/ponderada-teleop/install/teleop_turtlebot/lib/teleop_turtlebot
+[0.707s] 
+[0.707s] Installed /home/olin/github/ponderada-teleop/build/teleop_turtlebot
+[0.726s] Invoked command in '/home/olin/github/ponderada-teleop/build/teleop_turtlebot' returned '0': PYTHONPATH=/home/olin/github/ponderada-teleop/build/teleop_turtlebot/prefix_override:/home/olin/github/ponderada-teleop/install/teleop_turtlebot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/olin/github/ponderada-teleop/build/teleop_turtlebot/build --no-deps
